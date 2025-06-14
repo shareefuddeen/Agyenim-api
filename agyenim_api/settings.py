@@ -19,7 +19,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'), conn_max_age=600)
+    'default': dj_database_url.config(default=os.environ.get('postgresql://agyenim_boateng_database_user:U61Ne1T98g3WRdckeESZ4yZnm6aLAXS8@dpg-d16t5u15pdvs73fo6ttg-a/agyenim_boateng_database'), conn_max_age=600)
 }
 
 
