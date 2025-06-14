@@ -1,15 +1,1 @@
-services:
-  - type: web
-    name: agyenim-api
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn agyenim_api.wsgi:application --bind 0.0.0.0:$PORT
-    envVars:
-      - key: DATABASE_URL
-        fromDatabase:
-          name: agyenim-db
-          property: connectionString
-      - key: DJANGO_SECRET_KEY
-        generateValue: true
-      - key: DEBUG
-        value: "False"
+startCommand: gunicorn agyenim_api.wsgi:application --bind 0.0.0.0:$PORT
